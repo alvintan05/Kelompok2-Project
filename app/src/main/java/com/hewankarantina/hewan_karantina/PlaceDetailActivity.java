@@ -1,6 +1,7 @@
 package com.hewankarantina.hewan_karantina;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
 
     // widget
     private SliderLayout sliderLayout;
-    private Button btnDonasi;
+    private Button btnListPet, btnDonasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,7 @@ public class PlaceDetailActivity extends AppCompatActivity {
         // inisialisasi
         sliderLayout = (SliderLayout) findViewById(R.id.detail_image_slider);
         btnDonasi = (Button) findViewById(R.id.btn_donasi);
+        btnListPet = (Button) findViewById(R.id.btn_list_pet);
 
         HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
         file_maps.put("slide1", R.drawable.slide1);
@@ -54,6 +56,13 @@ public class PlaceDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 donate();
+            }
+        });
+
+        btnListPet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PlaceDetailActivity.this, PetListActivity.class));
             }
         });
     }

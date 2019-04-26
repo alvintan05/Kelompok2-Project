@@ -13,6 +13,8 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.hewankarantina.hewan_karantina.FormPengisian;
+import com.hewankarantina.hewan_karantina.GridLayout;
 import com.hewankarantina.hewan_karantina.PetListActivity;
 import com.hewankarantina.hewan_karantina.PlaceDetailActivity;
 import com.hewankarantina.hewan_karantina.R;
@@ -26,7 +28,7 @@ public class HomeFragment extends Fragment {
 
     // widget
     private SliderLayout sliderLayout;
-    private Button btnAdopt, btnTempat;
+    private Button btnAdopt, btnTempat, btnForm;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -43,11 +45,12 @@ public class HomeFragment extends Fragment {
         btnAdopt = (Button) view.findViewById(R.id.btn_adopt);
         sliderLayout = (SliderLayout) view.findViewById(R.id.home_image_slider);
         btnTempat = (Button) view.findViewById(R.id.btn_tempat);
+        btnForm = (Button) view.findViewById(R.id.btn_form);
 
         btnAdopt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), PetListActivity.class));
+                startActivity(new Intent(getActivity(), GridLayout.class));
             }
         });
 
@@ -55,6 +58,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), PlaceDetailActivity.class));
+            }
+        });
+
+        btnForm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), FormPengisian.class));
             }
         });
 
