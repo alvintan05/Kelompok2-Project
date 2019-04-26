@@ -21,14 +21,10 @@
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/NoToolbar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".DaftarActivity" />
+        <activity android:name=".FormPengisian" />
+        <activity android:name=".GridLayout"></activity>
     </application>
 
 </manifest>
