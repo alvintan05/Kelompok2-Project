@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hewankarantina.hewan_karantina">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,20 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppToolbar">
         <activity
+            android:name=".PetListActivity"
+            android:theme="@style/NoToolbar"></activity>
+        <activity
+            android:name=".PlaceDetailActivity"
+            android:theme="@style/NoToolbar"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/NoToolbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".DaftarActivity" />
     </application>
 
